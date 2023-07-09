@@ -1,10 +1,11 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {HomePoke, PokemonScreen} from '../screens';
+import {SimplePokemon} from '../interfaces/PokeData';
 
 export type RootStackParams = {
   HomePoke: undefined;
-  PokemonScreen: undefined;
+  PokemonScreen: {pokemon: SimplePokemon; color: string};
 };
 
 const Stack = createStackNavigator<RootStackParams>();

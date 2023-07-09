@@ -4,6 +4,7 @@ import {globalStyles} from '../theme/GlobalStyles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {usePokemonPaginated} from '../hooks/usePokemonPaginated';
 import {SimplePokemon} from '../interfaces/PokeData';
+import {PokemonCard} from '../components/PokemonCard';
 
 type ItemProps = {
   item: SimplePokemon;
@@ -12,14 +13,8 @@ type ItemProps = {
 export const HomePoke = () => {
   const {isLoading, simplePokemonList, loadPokemons} = usePokemonPaginated();
 
-  console.log('data', JSON.stringify(simplePokemonList, null, 2));
-
   const renderItem = ({item}: ItemProps) => {
-    return (
-      <View key={item.id} style={{backgroundColor: 'red'}}>
-        <Text>{item.name}</Text>
-      </View>
-    );
+    return <PokemonCard pokemon={item} />;
   };
 
   return (
@@ -32,8 +27,13 @@ export const HomePoke = () => {
         source={require('../assets/pokebola.png')}
         style={globalStyles.backgroundImage}
       />
-      <SafeAreaView style={{...globalStyles.globalMargin, flex: 1}}>
-        <Text style={globalStyles.title}>Pokedexx</Text>
+      <SafeAreaView
+        style={{
+          // ...globalStyles.globalMargin,
+          flex: 1,
+          // backgroundColor: 'green',
+          alignItems: 'center',
+        }}>
         {/* {isLoading ? (
           <View
             style={{
@@ -49,10 +49,15 @@ export const HomePoke = () => {
           data={simplePokemonList}
           renderItem={renderItem}
           keyExtractor={item => item.id}
+          // colums
+          numColumns={2}
           // infiniteScroll
           onEndReached={loadPokemons}
           onEndReachedThreshold={0.4}
           showsVerticalScrollIndicator={false}
+          // Header
+          ListHeaderComponent={<Text style={globalStyles.title}>Pokedexx</Text>}
+          // Footer
           ListFooterComponent={
             <ActivityIndicator
               style={{
