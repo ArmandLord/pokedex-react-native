@@ -6,6 +6,7 @@ import {SimplePokemon} from '../interfaces/PokeData';
 export type RootStackParams = {
   HomePoke: undefined;
   PokemonScreen: {pokemon: SimplePokemon; color: string};
+  BottomNavigationTab: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParams>();

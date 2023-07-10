@@ -1898,6 +1898,15 @@
     invariant "^2.2.4"
     nullthrows "^1.1.1"
 
+"@react-navigation/bottom-tabs@^6.5.8":
+  version "6.5.8"
+  resolved "https://registry.yarnpkg.com/@react-navigation/bottom-tabs/-/bottom-tabs-6.5.8.tgz#9536c6e45154abc183c363d07c94991e10b14856"
+  integrity sha512-0aa/jXea+LyBgR5NoRNWGKw0aFhjHwCkusigMRXIrCA4kINauDcAO0w0iFbZeKfaTCVAix5kK5UxDJJ2aJpevg==
+  dependencies:
+    "@react-navigation/elements" "^1.3.18"
+    color "^4.2.3"
+    warn-once "^0.1.0"
+
 "@react-navigation/core@^6.4.9":
   version "6.4.9"
   resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-6.4.9.tgz#aa09ce534f5393427cb993cf242abdbd848fb2c7"
@@ -6060,7 +6069,7 @@ react-native-gesture-handler@^2.12.0:
     lodash "^4.17.21"
     prop-types "^15.7.2"
 
-react-native-image-colors@1.5.2:
+react-native-image-colors@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/react-native-image-colors/-/react-native-image-colors-1.5.2.tgz#b3aaa42fb5c57c0accaa6922b8412f1a68b315f9"
   integrity sha512-yGsxwjQZFL5fthNc/F8//sSH1WZtC0OmxN7HQhXE1gSH0ApldOMkl5njTTMnWSUT/t1iCCBZrANSj3gnw1UaOg==
