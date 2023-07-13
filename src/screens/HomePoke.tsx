@@ -6,7 +6,7 @@ import {usePokemonPaginated} from '../hooks/usePokemonPaginated';
 import {SimplePokemon} from '../interfaces/PokeData';
 import {PokemonCard} from '../components/PokemonCard';
 
-type ItemProps = {
+export type ItemProps = {
   item: SimplePokemon;
 };
 
@@ -56,7 +56,7 @@ export const HomePoke = () => {
           onEndReachedThreshold={0.4}
           showsVerticalScrollIndicator={false}
           // Header
-          ListHeaderComponent={<Text style={globalStyles.title}>Pokedexx</Text>}
+          ListHeaderComponent={<Text style={globalStyles.title}>Pokedex</Text>}
           // Footer
           ListFooterComponent={
             <ActivityIndicator
